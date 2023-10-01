@@ -6,10 +6,15 @@ describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
   let fixture: ComponentFixture<SearchBarComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ SearchBarComponent ]
+    })
+    .compileComponents();
+  });
+
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SearchBarComponent]
-    });
     fixture = TestBed.createComponent(SearchBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
