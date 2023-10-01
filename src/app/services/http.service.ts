@@ -1,6 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { environment as env } from 'src/environments/environment';
+import { APIResponse, Game } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -48,11 +51,3 @@ export class HttpService {
     );
   }
 }
-function forkJoin(arg0: { gameInfoRequest: import("rxjs").Observable<Object>; gameScreenshotsRequest: import("rxjs").Observable<Object>; gameTrailersRequest: import("rxjs").Observable<Object>; }) {
-  throw new Error('Function not implemented.');
-}
-
-function map(arg0: (resp: any) => any): any {
-  throw new Error('Function not implemented.');
-}
-
