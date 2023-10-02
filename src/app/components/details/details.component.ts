@@ -11,10 +11,10 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
   gameRating = 0;
-  gameId: string;
-  game: Game;
-  routeSub: Subscription;
-  gameSub: Subscription;
+  gameId: string = '';
+  game?: Game;
+  routeSub: Subscription = new Subscription();
+  gameSub: Subscription = new Subscription();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -35,7 +35,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
         this.game = gameResp;
 
         setTimeout(() => {
-          this.gameRating = this.game.metacritic;
+          this.gameRating = this.game?.metacritic as number;
         }, 1000);
       });
   }
