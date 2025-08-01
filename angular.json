@@ -37,6 +37,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ng-video-game-db/",
               "budgets": [
                 {
                   "type": "initial",
