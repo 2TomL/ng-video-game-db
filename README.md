@@ -2,6 +2,8 @@
 
 An Angular application for browsing video games using the RAWG Video Games Database API.
 
+🚀 **[LIVE DEMO](https://2toml.github.io/ng-video-game-db/)** - Working demo with real API integration!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
 ## Setup
