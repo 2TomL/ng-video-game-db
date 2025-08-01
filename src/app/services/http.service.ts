@@ -10,9 +10,6 @@ import { APIResponse, Game } from '../models';
 })
 export class HttpService {
 
-  private rapidApiKey = 'edbb1b1bb3mshd01e55b2b432362p170af0jsnb241407192a4';
-  private rapidApiHost = 'rawg-video-games-database.p.rapidapi.com';
-
   constructor(private http: HttpClient) { }
 
   getGameList(
@@ -26,8 +23,8 @@ export class HttpService {
     }
 
     const headers = new HttpHeaders({
-      'X-RapidAPI-Key': this.rapidApiKey,
-      'X-RapidAPI-Host': this.rapidApiHost
+      'X-RapidAPI-Key': env.RAPIDAPI_KEY,
+      'X-RapidAPI-Host': env.RAPIDAPI_HOST
     });
 
     return this.http.get<APIResponse<Game>>(`${env.BASE_URL}/games`, {
@@ -38,8 +35,8 @@ export class HttpService {
 
   getGameDetails(id: string): Observable<Game> {
     const headers = new HttpHeaders({
-      'X-RapidAPI-Key': this.rapidApiKey,
-      'X-RapidAPI-Host': this.rapidApiHost
+      'X-RapidAPI-Key': env.RAPIDAPI_KEY,
+      'X-RapidAPI-Host': env.RAPIDAPI_HOST
     });
 
     const gameInfoRequest = this.http.get(`${env.BASE_URL}/games/${id}`, { headers });

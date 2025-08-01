@@ -1,6 +1,26 @@
-# NgVideoGameDb
+# Video-Games-DB
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+
+## Setup
+
+### 1. Install dependencies
+```bash
+npm install
+```
+
+### 2. Set up environment variables
+1. Copy `src/environments/environment.template.ts` to `src/environments/environment.ts`
+2. Copy `src/environments/environment.prod.template.ts` to `src/environments/environment.prod.ts`
+3. Replace the placeholder values with your actual API keys:
+   - `YOUR_RAPIDAPI_KEY_HERE` - Get from [RapidAPI](https://rapidapi.com/)
+   - `YOUR_RAWG_API_KEY_HERE` - Get from [RAWG Video Games Database](https://rawg.io/apidocs)
+
+### 3. Start the development server
+```bash
+npm start
+```
+Navigate to `http://localhost:4200/`
 
 ## Development server
 

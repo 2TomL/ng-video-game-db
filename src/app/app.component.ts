@@ -7,6 +7,8 @@ import { HttpService } from './services/http.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  title = 'Video-Games-DB';
+  
   constructor(private httpService: HttpService) {}
   ngOnInit(): void {
     this.httpService
